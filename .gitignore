@@ -1,0 +1,14 @@
+# Allow-list: ignore everything, then re-include only the environment files.
+*
+!.gitignore
+!.envrc
+!devenv.nix
+!devenv.yaml
+!devenv.lock
+!secretspec.toml
+!nix/
+!nix/*.nix
+
+# Never commit local overrides or secret stores, even if re-included above.
+devenv.local.*
+*.kdbx
